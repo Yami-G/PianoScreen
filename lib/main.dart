@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:untitled1/Screens/list_sort_screen.dart';
+
+import 'Screens/piano_screen.dart';
 
 void main() {
   runApp(const ProviderScope(child: MyApp()));
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             primarySwatch: Colors.blue,
           ),
-          home: const ListSortScreen(),
+          home: const PianoScreen(),
         );
       },
     );
