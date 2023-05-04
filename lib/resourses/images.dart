@@ -16,4 +16,6 @@ class Resources {
   static const String key8 = '$pathSounds/key08.mp3';
   static const String key9 = '$pathSounds/key09.mp3';
   static const String key10 = '$pathSounds/key10.mp3';
+  static const String play1 = '$pathSounds/c-major.mp3';
+  static const String play2 = '$pathSounds/Liszt_Paganini.mp3';
 }

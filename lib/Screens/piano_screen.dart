@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import '../Model/sound_class.dart';
 import '../Widget/piano_keyboard.dart';
+import '../Widget/pop_up_menu.dart';
 import '../resourses/images.dart';
 
 class PianoScreen extends ConsumerWidget {
@@ -12,11 +15,20 @@ class PianoScreen extends ConsumerWidget {
     return Scaffold(
       body: Column(
         children: [
-          Image.asset(
-            Resources.crowd2,
-            width: double.infinity,
-            height: 400.h,
-            fit: BoxFit.cover,
+          Stack(
+            children: [
+              Image.asset(
+                Resources.crowd2,
+                width: double.infinity,
+                height: 400.h,
+                fit: BoxFit.cover,
+              ),
+              Positioned(
+                right: 20.w,
+                top: 20.h,
+                child: const PopUpMenuCust(),
+              ),
+            ],
           ),
           Expanded(
             child: SizedBox(

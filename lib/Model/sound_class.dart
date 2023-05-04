@@ -1,8 +1,8 @@
 import 'package:audioplayers/audioplayers.dart';
 
-class PlaySound {
-  final player = AudioPlayer()..audioCache;
+final player = AudioPlayer()..audioCache;
 
+class PlaySound {
   void playSound(String path) {
     if (player.state == PlayerState.playing) {
       player.stop().then((v) {
@@ -14,6 +14,12 @@ class PlaySound {
       player.play(
         AssetSource(path),
       );
+    }
+  }
+
+  void stopPlay() {
+    if (player.state == PlayerState.playing) {
+      player.stop();
     }
   }
 }
